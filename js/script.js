@@ -78,4 +78,15 @@ $(document).ready(function () {
     }
 
     new StickyNavigation();
+
+// Hover
+
+    $('.hover-icon').mouseover(function () {
+        $('.hover-text').css('visibility', 'visible');
+
+    });
+
+    $('.hover-icon').mouseout(function () {
+        $('.hover-text').css('visibility', 'hidden');
+    });
 });
