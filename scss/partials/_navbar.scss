@@ -125,11 +125,11 @@ body {
 
 
 .et-slide-body {
-  @include flex(center, center, column nowrap);
+  align-self: center;
   height: 100vh;
   position: relative;
   background: $primary__color;
-  text-align: center;
+  text-align: left;
   padding: 0 2em;
 
 }
