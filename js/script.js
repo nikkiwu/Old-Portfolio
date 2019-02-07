@@ -57,7 +57,7 @@ $(document).ready(function () {
                     newCurrentTab = $(this);
                 }
             });
-            if (this.currentId != newCurrentId || this.currentId === null) {
+            if (this.currentId !== newCurrentId || this.currentId === null) {
                 this.currentId = newCurrentId;
                 this.currentTab = newCurrentTab;
                 this.setSliderCss();
@@ -81,4 +81,39 @@ $(document).ready(function () {
 
 // onclick
 
+    $('#p1Next').click(function () {
+        $('.easy1').slideToggle();
+        $('.easy2').slideToggle();
+    });
+    $('#p2Back').click(function () {
+        $('.easy1').slideToggle();
+        $('.easy2').slideToggle();
+    });
+
+    $('#p3Next').click(function () {
+        $('.easy1').slideToggle();
+        $('.easy2').slideToggle();
+    });
+    $('#p4Back').click(function () {
+        $('.easy1').slideToggle();
+        $('.easy2').slideToggle();
+    });
+    $('#p5Next').click(function () {
+        $('.easy1').slideToggle();
+        $('.easy2').slideToggle();
+    });
+    $('#p6Back').click(function () {
+        $('.easy1').slideToggle();
+        $('.easy2').slideToggle();
+    });
+    $('#p7Next').click(function () {
+        $('.easy1').slideToggle();
+        $('.easy2').slideToggle();
+    });
+    $('#p8Back').click(function () {
+        $('.easy1').slideToggle();
+        $('.easy2').slideToggle();
+    });
 });
+
+
