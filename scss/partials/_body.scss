@@ -1,11 +1,28 @@
 .project-1, .project-2, .project-3, .project-4 {
   @include flex(flex-start, center, row nowrap);
   background-size: cover !important;
+
+  h1 {
+    @include tablet {
+      font-size: 4rem;
+    }
+  }
+
+  input, p, li {
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+
 }
+
 
 .project-1 {
 
   background: linear-gradient(rgba(0, 0, 0, .70) 0, rgba(0, 0, 0, .70)), url("/images/calmversation preview.png") no-repeat left;
+
+
 }
 
 .project-2 {
@@ -30,6 +47,9 @@
 .easy2 {
   width: 100%;
   display: none;
+  @include tablet {
+    width: 80%;
+  }
 
   #p2Back {
     padding: 0.5rem 0;
@@ -58,7 +78,26 @@
 // What i do
 
 .what-i-do {
-  @include flex(space-evenly, center, column nowrap);
+  @include flex(space-evenly, flex-start, column nowrap);
+
+  h1 {
+    @include tablet {
+      font-size: 4rem;
+    }
+  }
+
+  h2 {
+    color: #5b5c70;
+    @include tablet {
+      font-size: 2.2rem;
+    }
+  }
+
+  p {
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
 
   .goals {
     text-align: right;
@@ -69,14 +108,20 @@
 // About me
 
 .about-me {
+  @include flex(center, flex-end, column nowrap);
+
   h1 {
     line-height: 2.7rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-flow: column;
+    display: inline-grid;
     text-align: right;
     font-size: 15vw;
+    @include tablet {
+      line-height: 5.3rem;
+    }
+
+    span {
+      color: $paragraph__color;
+    }
   }
 
 }
@@ -84,10 +129,17 @@
 .about-content-holder {
   @include flex(flex-start, null, wrap);
   margin: 30px 0 80px;
+  @include tablet {
+
+  }
 
   h3 {
+    color: #5b5c70;
     margin-bottom: 20px;
+    text-transform: uppercase;
+
   }
+
 
   p {
     flex-basis: 100%;

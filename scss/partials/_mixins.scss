@@ -5,4 +5,8 @@
   flex-flow: $flexflow;
 }
 
-
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
