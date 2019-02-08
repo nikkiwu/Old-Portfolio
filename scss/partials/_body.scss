@@ -1,6 +1,8 @@
 .project-1, .project-2, .project-3, .project-4 {
+  color: $white;
   @include flex(flex-start, center, row nowrap);
   background-size: cover !important;
+
 
   h1 {
     @include tablet {
@@ -9,12 +11,32 @@
   }
 
   input, p, li {
+    color: $white;
     @include tablet {
       font-size: 1.5rem;
     }
   }
 
 
+}
+
+.project-1 {
+  @include desktop {
+    display: none;
+  }
+}
+
+.project-2, .project-3, .project-4 {
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktop-project {
+  display: none;
+  @include desktop {
+    display: block;
+  }
 }
 
 
@@ -108,7 +130,7 @@
 // About me
 
 .about-me {
-  @include flex(center, flex-end, column nowrap);
+  @include flex(center, null, column nowrap);
 
   h1 {
     line-height: 2.7rem;
@@ -117,6 +139,9 @@
     font-size: 15vw;
     @include tablet {
       line-height: 5.3rem;
+    }
+    @include desktop {
+      line-height: 7.2rem;
     }
 
     span {
@@ -142,6 +167,207 @@
 
 
   p {
+    color: $white;
     flex-basis: 100%;
+  }
+}
+
+
+// desktop project
+
+//colors
+$color_astral_approx: #3085a3;
+$color_limed_spruce_approx: #3c4a50;
+$color_shark_approx: #252d31;
+
+//fonts
+$font_0: feathericons;
+
+//@extend-elements
+//original selectors
+//.grid figure figcaption, .grid figure figcaption >a
+%extend_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.grid {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center;
+
+  figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 48%;
+    background: $color_astral_approx;
+    text-align: center;
+    cursor: pointer;
+
+    img {
+      position: relative;
+      display: block;
+      min-height: 100%;
+      max-width: 100%;
+      opacity: 0.8;
+    }
+
+    figcaption {
+      font-family: 'Roboto Mono', monospace;
+      padding: 2em;
+      color: $paragraph__color;
+      text-transform: uppercase;
+      font-size: 1.25em;
+      backface-visibility: hidden;
+      @extend %extend_1;
+
+      > a {
+        @extend %extend_1;
+        z-index: 1000;
+        text-indent: 200%;
+        white-space: nowrap;
+        font-size: 0;
+        opacity: 0;
+      }
+    }
+
+    figcaption::before {
+      pointer-events: none;
+    }
+
+    figcaption::after {
+      pointer-events: none;
+    }
+
+    h2 {
+      word-spacing: -0.15em;
+      font-weight: 300;
+      margin: 0;
+
+      span {
+        font-weight: 800;
+      }
+    }
+
+    p {
+      margin: 0;
+      letter-spacing: 1px;
+      font-size: 68.5%;
+    }
+  }
+}
+
+
+figure.effect-zoe {
+  figcaption {
+    top: auto;
+    bottom: 0;
+    padding: 1em;
+    height: 3.75em;
+    background: $white;
+    color: $color_limed_spruce_approx;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: transform 0.35s;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translate3d(0, 100%, 0);
+  }
+
+  h2 {
+    float: left;
+    display: inline-block;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: transform 0.35s;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translate3d(0, 200%, 0);
+  }
+
+  p {
+    &.description {
+      position: absolute;
+      bottom: 8em;
+      padding: 1rem;
+      color: $white;
+      text-transform: none;
+      font-size: 1rem;
+      opacity: 0;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: opacity 0.35s;
+    }
+
+    &.icon-links a {
+      float: right;
+      color: $color_limed_spruce_approx;
+      font-size: 2rem;
+      padding: 0 1rem;
+      transition: transform 0.35s;
+      transform: translate3d(0, 200%, 0);
+
+      span::before {
+        display: inline-block;
+        padding: 8px 10px;
+        font-family: $font_0;
+        speak: none;
+      }
+    }
+  }
+
+  &:hover {
+    p {
+      &.description {
+        opacity: 1;
+      }
+
+      &.icon-links a {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate3d(0, 0, 0);
+
+        &:hover {
+          color: $color_shark_approx;
+        }
+
+        &:focus {
+          color: $color_shark_approx;
+        }
+
+        &:nth-child(3) {
+          //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+          transition-delay: 0.1s;
+        }
+
+        &:nth-child(2) {
+          //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+          transition-delay: 0.15s;
+        }
+
+        &:first-child {
+          //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+          transition-delay: 0.2s;
+        }
+      }
+    }
+
+    figcaption {
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translate3d(0, 0, 0);
+    }
+
+    h2 {
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translate3d(0, 0, 0);
+      //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+      transition-delay: 0.05s;
+    }
   }
 }
