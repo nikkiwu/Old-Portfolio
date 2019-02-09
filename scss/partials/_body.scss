@@ -10,6 +10,10 @@
     }
   }
 
+  input {
+    padding: 1rem 0;
+  }
+
   input, p, li {
     color: $white;
     @include tablet {
@@ -73,12 +77,9 @@
     width: 80%;
   }
 
-  #p2Back {
-    padding: 0.5rem 0;
-  }
 
   p {
-    color: $paragraph__color;
+    color: $white;
   }
 
   ul {
@@ -90,7 +91,7 @@
   }
 
   ul li {
-    color: $paragraph__color;
+    color: $white;
     text-decoration: none;
     list-style: none;
 
@@ -100,28 +101,42 @@
 // What i do
 
 .what-i-do {
+  background: $paragraph__color;
   @include flex(space-evenly, flex-start, column nowrap);
 
   h1 {
+    text-transform: uppercase;
+    color: $white;
     @include tablet {
       font-size: 4rem;
     }
   }
 
   h2 {
-    color: #5b5c70;
+    color: $white;
     @include tablet {
       font-size: 2.2rem;
     }
   }
 
   p {
+    color: $white;
     @include tablet {
       font-size: 1.5rem;
     }
   }
 
-  .goals {
+  .half-1, .half-2 {
+    border-radius: 25px;
+    padding: 2rem;
+  }
+
+  .half-1 {
+    background: #f95578;
+  }
+
+  .half-2 {
+    background: #52a8ea;
     text-align: right;
 
   }
