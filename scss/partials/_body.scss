@@ -100,45 +100,58 @@
 
 // What i do
 
-.what-i-do {
-  background: $paragraph__color;
-  @include flex(space-evenly, flex-start, column nowrap);
+.work {
+  background: $white;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-  h1 {
-    text-transform: uppercase;
-    color: $white;
-    @include tablet {
-      font-size: 4rem;
+  .work-title {
+    text-align: center;
+  }
+
+  .color-cn {
+    color: #FA4F5B;
+  }
+
+  .mb-xxlg {
+    margin-bottom: 32px !important;
+  }
+
+  .box {
+    height: auto !important;
+  }
+
+  .slider-content {
+    position: relative;
+    z-index: 10;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .item {
+    width: 100%;
+    transition: 0.45s ease-in-out all;
+
+    .work-right {
+      text-align: right;
     }
-  }
 
-  h2 {
-    color: $white;
-    @include tablet {
-      font-size: 2.2rem;
+    .box {
+      padding: 20px;
+      float: left;
+
+      .work-left {
+        text-align: left;
+      }
+
+
     }
-  }
-
-  p {
-    color: $white;
-    @include tablet {
-      font-size: 1.5rem;
-    }
-  }
-
-  .half-1, .half-2 {
-    border-radius: 25px;
-    padding: 2rem;
-  }
-
-  .half-1 {
-    background: #f95578;
-  }
-
-  .half-2 {
-    background: #52a8ea;
-    text-align: right;
-
   }
 }
 

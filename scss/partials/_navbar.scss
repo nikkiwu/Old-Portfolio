@@ -29,9 +29,25 @@ body {
     .hero-text {
       @include flex(center, flex-start, row nowrap);
       margin: 0 auto;
+      @include desktop {
+        width: 50%;
+        align-items: center;
+        text-align: left;
+        padding-left: 40px;
+        padding-right: 40px;
+        p {
+          padding: 0;
+        }
+      }
 
       .hero-text-wrapper {
         width: 345px;
+
+        h2 {
+          @include desktop {
+            line-height: 1.2;
+          }
+        }
       }
     }
 
@@ -39,18 +55,28 @@ body {
       @include flex(center, center, row nowrap);
       line-height: 1.1;
 
-
+      @include desktop {
+        justify-content: flex-end;
+        line-height: 1.2;
+      }
     }
 
     .half {
       width: 100%;
       height: 45vh;
-
+      @include desktop {
+        width: 50%;
+        height: 100vh;
+        float: left;
+      }
 
       .hero-title {
         width: 100%;
         font-size: 3.5em;
         text-transform: uppercase;
+        @include desktop {
+          border-right: 5px solid #fff;
+        }
       }
     }
   }
@@ -89,6 +115,7 @@ body {
   width: 100%;
   height: 70px;
   z-index: 10;
+  margin: 0 auto;
 
   &--top {
     position: fixed;
@@ -167,7 +194,7 @@ body {
 
 .et-slide-body {
   align-self: center;
-  height: 100vh;
+  height: 106vh;
   position: relative;
   background: $primary__color;
   text-align: left;
