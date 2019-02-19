@@ -60,20 +60,9 @@ $(document).ready(function () {
             if (this.currentId !== newCurrentId || this.currentId === null) {
                 this.currentId = newCurrentId;
                 this.currentTab = newCurrentTab;
-                this.setSliderCss();
             }
         }
 
-        setSliderCss() {
-            let width = 0;
-            let left = 0;
-            if (this.currentTab) {
-                width = this.currentTab.css('width');
-                left = this.currentTab.offset().left;
-            }
-            $('.et-hero-tab-slider').css('width', width);
-            $('.et-hero-tab-slider').css('left', left);
-        }
 
     }
 

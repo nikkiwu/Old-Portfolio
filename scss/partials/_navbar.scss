@@ -35,13 +35,13 @@ body {
         text-align: left;
         padding-left: 40px;
         padding-right: 40px;
-        p {
-          padding: 0;
-        }
       }
 
       .hero-text-wrapper {
         width: 345px;
+        @include desktop {
+          width: 100%;
+        }
 
         h2 {
           @include desktop {
@@ -72,10 +72,11 @@ body {
 
       .hero-title {
         width: 100%;
-        font-size: 3.5em;
+        font-size: 3rem;
         text-transform: uppercase;
         @include desktop {
           border-right: 5px solid #fff;
+          font-size: 10rem;
         }
       }
     }
@@ -98,12 +99,19 @@ body {
     font-weight: bold;
     font-size: 1.3rem;
     letter-spacing: 0.3rem;
+    @include desktop {
+      font-size: 2.9rem;
+    }
   }
 
   p {
     padding-top: 1rem;
     color: $white;
     font-size: 1rem;
+    @include desktop {
+      padding-top: 10px;
+      font-size: 1.5rem;
+    }
   }
 
 }
@@ -113,6 +121,8 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+  min-width: 320px;
+  max-width: 1240px;
   height: 70px;
   z-index: 10;
   margin: 0 auto;
