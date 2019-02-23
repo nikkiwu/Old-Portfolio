@@ -1,402 +1,467 @@
-.project-1, .project-2, .project-3, .project-4 {
-  color: $white;
-  @include flex(flex-start, center, row nowrap);
-  background-size: cover !important;
+@at-root {
 
-
-  h1 {
-    @include tablet {
-      font-size: 4rem;
-    }
+  html {
+    box-sizing: border-box;
   }
 
-  input {
-    padding: 1rem 0;
+  *, *:before, *:after {
+    box-sizing: inherit;
   }
 
-  input, p, li {
-    color: $white;
-    @include tablet {
-      font-size: 1.5rem;
-    }
+  html {
+    font-size: 62.5%;
   }
 
+  body {
+    font-size: 1.4rem;
+    font-family: 'Raleway', sans-serif, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
 }
 
-.project-1 {
-  @include desktop {
-    display: none;
-  }
-}
 
-.project-2, .project-3, .project-4 {
-  @include desktop {
-    display: none;
-  }
-}
+// ==================================================
+// Global utilities
+//
 
-.desktop-project {
-  display: none;
-  @include desktop {
-    display: block;
+@at-root {
+
+  .u-pullRight {
+    float: right;
   }
+
 }
 
 
-.project-1 {
+// ==================================================
+// Toggle
+//
 
-  background: linear-gradient(rgba(0, 0, 0, .70) 0, rgba(0, 0, 0, .70)), url("/images/calmversation preview.png") no-repeat left;
+@at-root {
 
-
-}
-
-.project-2 {
-  background: linear-gradient(rgba(0, 0, 0, .70) 0, rgba(0, 0, 0, .70)), url("/images/instanew preview.png") no-repeat left;
-}
-
-.project-3 {
-  background: linear-gradient(rgba(0, 0, 0, .70) 0, rgba(0, 0, 0, .70)), url("/images/pong preview.png") no-repeat left;
-
-}
-
-.project-4 {
-  background: linear-gradient(rgba(0, 0, 0, .30) 0, rgba(0, 0, 0, .30)), url("/images/inhabitent preview.png") no-repeat left;
-
-}
-
-.easy1 {
-  padding-top: 0.5rem;
-  width: 100%;
-}
-
-.easy2 {
-  width: 100%;
-  display: none;
-  @include tablet {
-    width: 80%;
-  }
-
-
-  p {
-    color: $white;
-  }
-
-  ul {
-    padding-top: 1rem;
-    display: grid;
-    grid-gap: 0.5rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  ul li {
-    color: $white;
-    text-decoration: none;
-    list-style: none;
-
-  }
-}
-
-// What i do
-
-.work {
-  color: $white;
-  background: $primary__color;
-  position: relative;
-  overflow: hidden;
-  height: auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  .work-title {
-    text-align: center;
-  }
-
-  .color-cn {
-    color: #FA4F5B;
-  }
-
-  .mb-xxlg {
-    margin-bottom: 32px !important;
-  }
-
-  .box {
-    height: auto !important;
-  }
-
-  .slider-content {
+  .Toggle {
     position: relative;
-    z-index: 10;
-  }
-
-  .container {
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-
-  .item {
-    width: 100%;
-    transition: 0.45s ease-in-out all;
-
-    .work-right {
-      text-align: right;
+    display: inline-block;
+    width: $l-Toggle-size;
+    height: $l-Toggle-size;
+    padding-top: $l-Toggle-size / 2;
+    border-radius: $l-Toggle-radius;
+    background-color: $c-Toggle-bg;
+    @at-root button#{&} {
+      border: 0;
+      cursor: pointer;
+      padding: 0;
     }
 
-    .box {
-      padding: 20px;
-      float: left;
-
-      .work-left {
-        text-align: left;
-      }
-
-
-    }
-  }
-}
-
-// About me
-
-.about-me {
-  @include flex(center, null, column nowrap);
-
-  h1 {
-    line-height: 2.7rem;
-    display: inline-grid;
-    text-align: right;
-    font-size: 15vw;
-    @include tablet {
-      line-height: 5.3rem;
-    }
-    @include desktop {
-      line-height: 7.2rem;
-    }
+    //
+    // Bars
+    //
 
     span {
-      color: $paragraph__color;
-    }
-  }
+      margin: -$l-Toggle-barHeight/2 auto 0;
+      vertical-align: top;
+      transition-duration: 0s;
+      transition-delay: 0.2s;
 
-}
+      // Hide text
+      text-indent: 100%;
+      line-height: 0;
+      white-space: nowrap;
+      overflow: hidden;
 
-.about-content-holder {
-  @include flex(flex-start, null, wrap);
-  margin: 30px 0 80px;
-  @include tablet {
+      &,
+      &:before,
+      &:after {
+        display: block;
+        width: $l-Toggle-barWidth;
+        height: $l-Toggle-barHeight;
+        background-color: $c-Toggle-bar;
+      }
 
-  }
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        transition-property: margin, transform;
+        transition-duration: 0.2s;
+        transition-delay: 0.2s, 0s;
+      }
 
-  h3 {
-    color: #5b5c70;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+      &:before {
+        margin-top: -$l-Toggle-barSpacing;
+      }
 
-  }
-
-
-  p {
-    color: $white;
-    flex-basis: 100%;
-  }
-}
-
-
-// desktop project
-
-//colors
-$color_astral_approx: #3085a3;
-$color_limed_spruce_approx: #3c4a50;
-$color_shark_approx: #252d31;
-
-//fonts
-$font_0: feathericons;
-
-//@extend-elements
-//original selectors
-//.grid figure figcaption, .grid figure figcaption >a
-%extend_1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-
-.grid {
-  position: relative;
-  margin: 0 auto;
-  padding: 1em 0 4em;
-  max-width: 1000px;
-  list-style: none;
-  text-align: center;
-
-  figure {
-    position: relative;
-    float: left;
-    overflow: hidden;
-    margin: 10px 1%;
-    min-width: 320px;
-    max-width: 480px;
-    max-height: 360px;
-    width: 48%;
-    background: $color_astral_approx;
-    text-align: center;
-    cursor: pointer;
-
-    img {
-      position: relative;
-      display: block;
-      min-height: 100%;
-      max-width: 100%;
-      opacity: 0.8;
-    }
-
-    figcaption {
-      font-family: 'Roboto Mono', monospace;
-      padding: 2em;
-      color: $paragraph__color;
-      text-transform: uppercase;
-      font-size: 1.25em;
-      backface-visibility: hidden;
-      @extend %extend_1;
-
-      > a {
-        @extend %extend_1;
-        z-index: 1000;
-        text-indent: 200%;
-        white-space: nowrap;
-        font-size: 0;
-        opacity: 0;
+      &:after {
+        margin-top: $l-Toggle-barSpacing;
       }
     }
 
-    figcaption::before {
-      pointer-events: none;
-    }
+    //
+    // s t a t e :  hover
+    //
 
-    figcaption::after {
-      pointer-events: none;
-    }
-
-    h2 {
-      word-spacing: -0.15em;
-      font-weight: 300;
-      margin: 0;
-
+    &:hover {
       span {
-        font-weight: 800;
+        &:before {
+          transform: translateY(-1px);
+        }
+
+        &:after {
+          transform: translateY(1px);
+        }
       }
     }
 
-    p {
-      margin: 0;
-      letter-spacing: 1px;
-      font-size: 68.5%;
+    //
+    // s t a t e :  avtive
+    //
+
+    &.is-active {
+      span {
+        background-color: rgba($c-Toggle-bar, 0);
+        transition-delay: 0.2s;
+
+        &:before,
+        &:after {
+          margin-top: 0;
+          transition-delay: 0s, 0.2s;
+        }
+
+        &:before {
+          transform: rotate(45deg);
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+}
+
+
+// ==================================================
+// Social icon links
+//
+
+@at-root {
+
+  .SocialLink {
+    color: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.28rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    vertical-align: top;
+    margin-left: -1px;
+    padding: unitSize(1.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background-color: $c-Navbar-bg;
+  }
+
+  .SocialLink-icon {
+    display: block;
+    width: $l-socialLink-iconSize;
+    height: $l-socialLink-iconSize;
+    vertical-align: middle;
+    fill: currentColor;
+  }
+
+  .SocialLink-text {
+    @include visuallyhidden();
+  }
+
+}
+
+
+// ==================================================
+// Navbar
+//
+
+@at-root {
+
+  body {
+    min-height: 100vh;
+    padding-top: $l-Navbar-size;
+    background: #4774e6;
+    background: -moz-linear-gradient(-45deg, #4774e6 0%, #1f1e8a 100%);
+    background: -webkit-linear-gradient(-45deg, #4774e6 0%, #1f1e8a 100%);
+    background: linear-gradient(135deg, #1f1e8a 0%, #4774e6 100%);
+  }
+
+  .Navbar {
+    color: $c-Navbar;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: $l-Navbar-itemLineHeight;
+    letter-spacing: 0.28rem;
+    text-transform: uppercase;
+    position: fixed;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    a:not(.Navbar-toggle) {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      @extend %resetList;
+    }
+  }
+
+  .Navbar-brand,
+  .Navbar-menu a,
+  .Navbar-quickLinks a {
+    display: block;
+  }
+
+  .Navbar-brand,
+  .Navbar-quickLinks a {
+    padding: $l-Navbar-itemPaddingY $l-Navbar-itemPaddingX;
+  }
+
+  .Navbar-quickLinks {
+    display: none;
+  }
+
+  .Navbar-menu {
+    line-height: 1.6rem;
+    position: fixed;
+    top: $l-Navbar-size;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 0%;
+    overflow-y: auto;
+    visibility: hidden;
+    padding: unitSize(3) 0;
+    background: rgba(black, 0.8);
+
+    opacity: 0;
+    transition-property: opacity, visibility, width;
+    transition-duration: 0.35s, 0.25s, 0.25s;
+    transition-delay: 0.1s;
+
+    .Navbar-menu-major {
+      flex-grow: 1;
+    }
+
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+      transition-duration: 0.15s, 0.25s, 0.25s;
+    }
+  }
+
+  .Navbar-menu-major a,
+  .Navbar-menu-minor a,
+  .Navbar-menu-minor .Navbar-menu-social {
+    padding: $l-Navbar-itemPaddingY $l-Navbar-menuOffset-sm;
+  }
+
+  .Navbar-menu-major {
+    font-size: 1.4rem;
+
+    a {
+      &:hover {
+        background-color: rgba(white, 0.06);
+      }
+    }
+  }
+
+  .Navbar-menu-minor {
+    color: darken($c-Navbar, 60%);
+    margin-top: $l-Navbar-itemPaddingX;
+
+    a {
+      padding-top: $l-Navbar-itemPaddingX / 2;
+      padding-bottom: $l-Navbar-itemPaddingX / 2;
+
+      &:hover {
+        color: $c-Navbar;
+      }
+    }
+  }
+
+  .Navbar-menu-social {
+    overflow: hidden;
+
+    li {
+      float: left;
     }
   }
 }
 
 
-figure.effect-zoe {
-  figcaption {
-    top: auto;
+// ==================================================
+// Breakpoints
+// ==================================================
+
+@include media-breakpoint-up(sm) {
+
+  .u-Navbar-hidden\@sm-up {
+    display: none;
+  }
+
+  body {
+    padding-top: 0;
+    padding-left: $l-Navbar-size;
+  }
+
+  .Navbar {
     bottom: 0;
-    padding: 1em;
-    height: 3.75em;
-    background: $white;
-    color: $color_limed_spruce_approx;
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-    transition: transform 0.35s;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-    transform: translate3d(0, 100%, 0);
+    width: $l-Navbar-size;
   }
 
-  h2 {
-    float: left;
-    display: inline-block;
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-    transition: transform 0.35s;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-    transform: translate3d(0, 200%, 0);
+  .Navbar-toggle {
+    position: absolute;
+    top: 0;
   }
 
-  p {
-    &.description {
-      position: absolute;
-      bottom: 8em;
-      padding: 1rem;
-      color: $white;
-      text-transform: none;
-      font-size: 1rem;
-      opacity: 0;
-      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-      transition: opacity 0.35s;
+  .Navbar-menu {
+    top: 0;
+    left: $l-Navbar-size;
+    padding-top: $l-Navbar-size - ($l-Navbar-itemPaddingX - $l-Navbar-brandOffset-sm);
+
+    &.is-active {
+      width: 26rem;
+    }
+  }
+
+  .Navbar-brand {
+    position: absolute;
+    top: $l-Navbar-size;
+    right: 0;
+    padding-left: $l-Navbar-brandOffset-sm !important;
+    padding-right: $l-Navbar-brandOffset-sm !important;
+    transform: rotate(-90deg) translateY(-$l-Navbar-size);
+    transform-origin: right top;
+  }
+
+  .Navbar-quickLinks {
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    padding-left: $l-Navbar-itemPaddingY !important;
+    transform: rotate(-90deg) translateX(-$l-Navbar-size);
+    transform-origin: 0 0;
+
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+// Hero Image and Title
+
+.hero-top-title {
+
+  @include flex(flex-start, center, row nowrap);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.hero-container {
+  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  .hero-text {
+    @include flex(center, flex-start, row nowrap);
+    margin: 0 auto;
+    @include desktop {
+      width: 50%;
+      align-items: center;
+      text-align: left;
+      padding-left: 40px;
+      padding-right: 40px;
     }
 
-    &.icon-links a {
-      float: right;
-      color: $color_limed_spruce_approx;
-      font-size: 2rem;
-      padding: 0 1rem;
-      transition: transform 0.35s;
-      transform: translate3d(0, 200%, 0);
+    .hero-text-wrapper {
+      width: 345px;
+      @include desktop {
+        width: 100%;
+      }
 
-      span::before {
-        display: inline-block;
-        padding: 8px 10px;
-        font-family: $font_0;
-        speak: none;
+      h2 {
+        @include desktop {
+          line-height: 1.2;
+        }
       }
     }
   }
 
-  &:hover {
-    p {
-      &.description {
-        opacity: 1;
-      }
+  .hero-pola {
+    @include flex(center, center, row nowrap);
+    line-height: 1.1;
 
-      &.icon-links a {
-        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-        transform: translate3d(0, 0, 0);
+    @include desktop {
+      justify-content: flex-end;
+      line-height: 1.2;
+    }
+  }
 
-        &:hover {
-          color: $color_shark_approx;
-        }
+  .half {
+    width: 100%;
+    height: 45vh;
+    @include desktop {
+      width: 50%;
+      height: 100vh;
+      float: left;
+    }
 
-        &:focus {
-          color: $color_shark_approx;
-        }
-
-        &:nth-child(3) {
-          //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
-          transition-delay: 0.1s;
-        }
-
-        &:nth-child(2) {
-          //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
-          transition-delay: 0.15s;
-        }
-
-        &:first-child {
-          //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
-          transition-delay: 0.2s;
-        }
+    .hero-title {
+      width: 100%;
+      font-size: 5rem;
+      text-transform: uppercase;
+      @include desktop {
+        border-right: 5px solid #fff;
+        font-size: 10rem;
       }
     }
+  }
+}
 
-    figcaption {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-      transform: translate3d(0, 0, 0);
-    }
 
-    h2 {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-      transform: translate3d(0, 0, 0);
-      //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
-      transition-delay: 0.05s;
-    }
+h1 {
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: $c-white;
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 0.5rem;
+}
+
+h2, h3 {
+  line-height: 2rem;
+  text-transform: capitalize;
+  color: $c-white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
+  @include desktop {
+    font-size: 2.9rem;
+  }
+}
+
+p {
+  padding-top: 1rem;
+  color: $c-white;
+  font-size: 1rem;
+  @include desktop {
+    padding-top: 10px;
+    font-size: 1.5rem;
   }
 }

@@ -1,10 +1,37 @@
-// Colors
-
-$primary__color: #22222A;
-$white: #ffffff;
-$paragraph__color: #52525f;
-$hero__color: linear-gradient(135deg, #1f1e8a 0%, #4774e6 100%);
-
+//// Colors
+//
+//$primary__color: #22222A;
+//$white: #ffffff;
+//$paragraph__color: #52525f;
+//$hero__color: linear-gradient(135deg, #1f1e8a 0%, #4774e6 100%);
+//
 $tablet-width: 750px;
 
 $desktop-width: 1024px;
+//
+//
+// Base
+$c-white: #fff;
+$c-black: #000;
+
+// Navbar
+$c-Navbar: $c-white;
+$c-Navbar-bg: $c-black;
+$l-Navbar-brandOffset-sm: 0.6rem;
+$l-Navbar-menuOffset-sm: 14%;
+$l-Navbar-itemLineHeight: 2.8rem;
+$l-Navbar-itemPaddingX: 1.4rem;
+$l-Navbar-itemPaddingY: 1.6rem;
+$l-Navbar-size: $l-Navbar-itemLineHeight + $l-Navbar-itemPaddingY * 2;
+
+// Toggle button
+$c-Toggle-bg: transparent;
+$c-Toggle-bar: $c-white;
+$l-Toggle-size: $l-Navbar-size;
+$l-Toggle-radius: 100%;
+$l-Toggle-barWidth: 2.1rem;
+$l-Toggle-barHeight: 0.2rem;
+$l-Toggle-barSpacing: 0.7rem;
+
+// Social links
+$l-socialLink-iconSize: unitSize(2);
