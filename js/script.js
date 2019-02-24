@@ -3,10 +3,11 @@ $(document).ready(function () {
         $(this).toggleClass('is-active');
         $('#navbarCollapse').toggleClass('is-active');
     });
+
+
 });
 
-
-;(function () {
+(function () {
     var httpRequest,
         a = document.createElement('a'),
         userName = 'sonjastrieder';

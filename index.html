@@ -9,6 +9,7 @@
     <!-- CSS Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
     <!-- My Style -->
+    <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -22,6 +23,7 @@
 
 <body>
 
+
 <nav class="Navbar">
     <a href="#" id="toggle" class="Toggle Navbar-toggle" data-toggle="collapse"
        data-target="#navbarCollapse"><span></span></a>
@@ -30,25 +32,12 @@
 
     <div id="navbarCollapse" class="Navbar-menu">
         <ul class="Navbar-menu-major">
-            <li><a href="#link">Gear</a></li>
-            <li><a href="#link">Music</a></li>
-            <li><a href="#link">Travel</a></li>
+            <li><a href="#link">Projects</a></li>
+            <li><a href="#link">Work I Do</a></li>
+            <li><a href="#link">About Me</a></li>
             <li><a href="#link">Photography</a></li>
         </ul>
-        <div class="Navbar-menu-minor">
-            <ul>
-                <li><a href="#link">Store</a></li>
-                <li><a href="#link">Deals</a></li>
-                <li><a href="#link">Themes</a></li>
-            </ul>
-            <ul>
-                <li><a href="#link">About</a></li>
-                <li><a href="#link">Advertising</a></li>
-                <li><a href="#link">Privacy Policy</a></li>
-                <li><a href="#link">Contact</a></li>
-            </ul>
-           
-        </div>
+
     </div>
 
     <ul class="Navbar-quickLinks">
@@ -57,7 +46,6 @@
         <li><a href="#link">Instagram</a></li>
     </ul>
 </nav>
-
 <main>
     <section class="et-hero-tabs">
         <div class="hero-container">
@@ -66,7 +54,6 @@
             </div>
             <div class="half hero-text">
                 <div class="hero-text-wrapper">
-                    <h2>photographer</h2>
                     <h2>Front-end Developer</h2>
                     <p>
                         Turn knowledge and data driven experiences and turning them into sustainable, semantic, clean
@@ -78,187 +65,87 @@
     </section>
 </main>
 
+<section class="portfolio" id="projects">
+    <div class="portfolio-title">
+        <h2 class="h1 container">Recent Projects</h2>
+    </div>
+    <article class="order-reverse-col-sm container">
+        <div class="port-text box lg">
+            <div class="portfolio-text-container">
+                <h3 class="mb-xxlg"><a class="link" href="/dittly">Dittly - do it together</a></h3>
+                <p class="mt-lg hidden-xs-up">Dittly, a platform on which users can plan projects and track and share
+                    their project progress with the home-improvement community.</p>
+                <p class="mt-lg hidden-xs-down">Dittly, a platform on which users can plan projects by saving
+                    milestones, lists, materials, and estimates, and then track and share their project progress with
+                    the home-improvement community.</p>
+                <a href="https://www.dittly.co/" target="_blank" class="mt-lg d-block link">dittly.co</a>
+                <div class="mt-lg"><span class="tag tag-red mr-lg bold color-cn">ux &amp; ui design</span><span
+                        class="tag tag-blue bold">front-end code</span></div>
+            </div>
+        </div>
+        <div class="box lg bg-grey">
+            <a href="/dittly"><img src="img/dittly.png"></a>
+        </div>
+        <div class="clear"></div>
+    </article>
+    <article class="container">
+        <div class="box lg bg-cn">
+            <a href="/ebrake"><img src="img/ebrake.png"></a>
+        </div>
+        <div class="port-text box lg">
+            <div class="portfolio-text-container">
+                <h3 class="mb-xxlg"><a class="link" href="/ebrake">eBrake.ca</a></h3>
+                <p class="mt-lg hidden-xs-up">Designed sleek, corporate, and minimal website experience and design to
+                    suit brand.</p>
+                <p class="mt-lg hidden-xs-down">Designed sleek, corporate, and minimal website experience and design to
+                    suit brand.</p>
+                <a href="http://ebrake.ca" target="_blank" class="mt-lg d-block link">ebrake.ca</a>
+                <div class="mt-lg"><span class="tag tag-red mr-lg bold color-cn">ux &amp; ui design</span><span
+                        class="tag tag-blue bold">front-end code</span></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </article>
+    <article class="order-reverse-col-sm container">
+        <div class="port-text box lg">
+            <div class="portfolio-text-container">
+                <h3 class="mb-xxlg"><a class="link" href="/messaging">ParkPnP Messaging Feature</a></h3>
+                <p class="mt-lg hidden-xs-up">Designed intuitive, easy, and familiar experience. Coded using Ruby on
+                    Rails and Bootstrap.</p>
+                <p class="mt-lg hidden-xs-down">Designed intuitive, easy, and familiar experience that is minimal and
+                    follows brand style. Coded using Ruby on Rails and Bootstrap to suit my clients development process
+                    while also integrating best practices easy for the development team to maintain.</p>
+                <a href="http://parkpnp.com" target="_blank" class="mt-lg d-block link">parkpnp.com</a>
+                <div class="mt-lg"><span class="tag tag-red mr-lg bold color-cn">ux &amp; ui design</span><span
+                        class="tag tag-blue bold">front-end code</span></div>
+            </div>
+        </div>
+        <div class="box lg bg-grey">
+            <a href="/messaging"><img src="img/parkpnp-mock.png"></a>
+        </div>
+        <div class="clear"></div>
+    </article>
+    <article class="container">
+        <div class="box lg bg-cn">
+            <a href="/lighthouselabs"><img src="img/lighthouse.png"></a>
+        </div>
+        <div class="port-text box lg">
+            <div class="portfolio-text-container">
+                <h3 class="mb-xxlg"><a class="link" href="/lighthouselabs">Lighthouselabs.ca</a></h3>
+                <p class="mt-lg hidden-xs-up">Developed the new front-end of a highly customized, responsive coding
+                    bootcamp website.</p>
+                <p class="mt-lg hidden-xs-down">Developed the new front-end of a complex coding bootcamp website that
+                    receives thousands of unique visitors a month. The design I coded was highly customized, and
+                    responsive with very important details and many micro-interactions.</p>
+                <a href="http://lighthouselabs.ca" target="_blank" class="mt-lg d-block link">Lighthouselabs.ca</a>
+                <div class="mt-lg"><span class="tag tag-blue bold">front-end code</span></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </article>
 
-<!--</div>-->
-<!--</section>-->
+</section>
 
-<!--<main class="et-main">-->
-<!--&lt;!&ndash;DESKTOP VERSION&ndash;&gt;-->
-<!--<section class="et-slide-body desktop-project" id="project">-->
-<!--<div class="grid">-->
-<!--<figure class="effect-zoe">-->
-<!--<img src="images/calmpreview.png" alt="img25"/>-->
-<!--<figcaption>-->
-<!--<h2>calmversation</h2>-->
-<!--<p class="icon-links">-->
-
-<!--<a href="#"><i class="fab fa-github"></i></a>-->
-<!--<a href="#"><i class="fab fa-chrome"></i></a>-->
-<!--</p>-->
-<!--<p class="description">calmversation is a wordpress site created to help clients understand their-->
-<!--goals and what they offer. It was revamped to help the client easily navigate through the site-->
-<!--to get to the teaching material. </p>-->
-<!--</figcaption>-->
-<!--</figure>-->
-<!--<figure class="effect-zoe">-->
-<!--<img src="images/instanew%20preview.png" alt="img26"/>-->
-<!--<figcaption>-->
-<!--<h2>instanews</h2>-->
-<!--<p class="icon-links">-->
-<!--<a href="#"><i class="fab fa-github"></i></a>-->
-<!--<a href="#"><i class="fab fa-chrome"></i></a>-->
-<!--</p>-->
-<!--<p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear-->
-<!--in his face.</p>-->
-<!--</figcaption>-->
-<!--</figure>-->
-<!--<figure class="effect-zoe">-->
-<!--<img src="images/pong%20preview.png" alt="img26"/>-->
-<!--<figcaption>-->
-<!--<h2>pong game</h2>-->
-<!--<p class="icon-links">-->
-<!--<a href="#"><i class="fab fa-github"></i></a>-->
-<!--<a href="#"><i class="fab fa-chrome"></i></a>-->
-<!--</p>-->
-<!--<p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear-->
-<!--in his face.</p>-->
-<!--</figcaption>-->
-<!--</figure>-->
-<!--<figure class="effect-zoe">-->
-<!--<img src="images/inhabitentpre.png" alt="img26"/>-->
-<!--<figcaption>-->
-<!--<h2>inhabitent</h2>-->
-<!--<p class="icon-links">-->
-<!--<a href="#"><i class="fab fa-github"></i></a>-->
-<!--<a href="#"><i class="fab fa-chrome"></i></a>-->
-<!--</p>-->
-<!--<p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear-->
-<!--in his face.</p>-->
-<!--</figcaption>-->
-<!--</figure>-->
-<!--</div>-->
-<!--</section>-->
-<!--&lt;!&ndash;MOBILE VERSION&ndash;&gt;-->
-<!--<section class="et-slide-body project-1" id="projects">-->
-<!--<div>-->
-<!--<h1>calmversation</h1>-->
-<!--<div class="easy1"><input id="p1Next" type="button" value="Project info"></div>-->
-<!--<div class="easy2"><input id="p2Back" type="button" value="Back">-->
-<!--<p class="info-text">-->
-<!--calmversation is a wordpress site created to help clients understand their-->
-<!--goals and what they offer. It was revamped to help the client easily navigate through the site-->
-<!--to get to the teaching material.-->
-<!--</p>-->
-<!--<ul>-->
-<!--<li>#WORDPRESS</li>-->
-<!--<li>#PHP</li>-->
-<!--<li>#RESPONSIVE</li>-->
-<!--<li>#MYSQL</li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!--<section class="et-slide-body project-2">-->
-<!--<div>-->
-<!--<h1>Instanews</h1>-->
-<!--<div class="easy1"><input id="p3Next" type="button" value="Project info"></div>-->
-<!--<div class="easy2"><input id="p4Back" type="button" value="Back">-->
-<!--<p class="info-text">-->
-<!--This project is a responsive website that displays top news stories which are fetched by using an-->
-<!--API from the NY Times. URL's and images from the New York times are appended on to the-->
-<!--webpage, where users can filter through different sections of articles using a drop down menu, and-->
-<!--it will display a total of 12 stories. Compatible for mobile, table and desktop views.-->
-<!--</p>-->
-<!--<ul>-->
-<!--<li>#GRID</li>-->
-<!--<li>#GULP</li>-->
-<!--<li>#API</li>-->
-<!--<li>#SASS</li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!--<section class="et-slide-body project-3">-->
-<!--<div>-->
-<!--<h1>Pong Game</h1>-->
-<!--<div class="easy1"><input id="p5Next" type="button" value="Project info"></div>-->
-<!--<div class="easy2"><input id="p6Back" type="button" value="Back">-->
-<!--<p class="info-text">-->
-<!--Recreation of the famous pong game. Created to practice ES6, Vanilla JS, and SASS. Ready to play!-->
-<!--</p>-->
-<!--<ul>-->
-<!--<li>#WEBPACK</li>-->
-<!--<li>#ES6</li>-->
-<!--<li>#OOP</li>-->
-<!--<li>#SASS</li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!--<section class="et-slide-body project-4">-->
-<!--<div>-->
-<!--<h1>Inhabitent</h1>-->
-<!--<div class="easy1"><input id="p7Next" type="button" value="Project info"></div>-->
-<!--<div class="easy2"><input id="p8Back" type="button" value="Back">-->
-<!--<p class="info-text">-->
-<!--Outdoor equipment based in Vancouver, BC. It is created with Wordpress and is multi-page site. Easy-->
-<!--to navigate through and lets the buyer enjoy the outdoors.-->
-<!--</p>-->
-<!--<ul>-->
-<!--<li>#GULP</li>-->
-<!--<li>#SASS</li>-->
-<!--<li>#WORDPRESS</li>-->
-<!--<li>#PHP</li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!--<section class="et-slide-body work bg-wall container" id="whatido">-->
-<!--<h2 class="h1 work-title">What I do</h2>-->
-<!--<div class="slider-content">-->
-<!--<div class="item active" slick-title="What I do">-->
-<!--<div class="box md work-left">-->
-<!--<h3 class="color-cn mb-xxlg">UX &amp; UI Design</h3>-->
-<!--<p><b>I design user friendly experiences for apps</b> using an iterative process of user research,-->
-<!--ideation, sketchboarding, wireframing, and prototyping. Using the brand’s persona and experience-->
-<!--guidelines, I create the visual design to suit the motivation, emotion, and story of the-->
-<!--experience.</p>-->
-<!--</div>-->
-<!--<div class="box md work-right">-->
-<!--<h3 class="color-cn mb-xxlg">Front-end Development</h3>-->
-<!--<p><b>I code the the interface</b> by building out designs and interactions, coding semantic and-->
-<!--accessible markup, building responsive layouts, and creating reusable components. I am excited-->
-<!--by working on a team with other enthusiastic developers to collaboratively solve problems and-->
-<!--build a high quality product together. </p>-->
-<!--</div>-->
-<!--<div class="clear"></div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!--<section class="et-slide-body about-me" id="aboutme">-->
-<!--<span class="firstOverlayLine line"></span>-->
-<!--<span class="secondOverlayLine line"></span>-->
-<!--<span class="thirdOverlayLine line"></span>-->
-<!--<span class="fourthOverlayLine line"></span>-->
-<!--<h1>Nikki <span>Wu</span></h1>-->
-<!--<div class="about-content-holder">-->
-<!--<h3>about</h3>-->
-<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem et iste, magnam nobis quos-->
-<!--sapiente vitae voluptas. Dolor, voluptatem.</p>-->
-<!--</div>-->
-<!--<div class="about-content-holder">-->
-<!--<h3>education</h3>-->
-<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem et iste, magnam nobis quos-->
-<!--sapiente vitae voluptas. Dolor, voluptatem.</p>-->
-<!--</div>-->
-<!--<div class="about-content-holder">-->
-<!--<h3>skills</h3>-->
-<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem et iste, magnam nobis quos-->
-<!--sapiente vitae voluptas. Dolor, voluptatem.</p>-->
-<!--</div>-->
-<!--</section>-->
-
-<!--</main>-->
 </body>
 
 </html>
