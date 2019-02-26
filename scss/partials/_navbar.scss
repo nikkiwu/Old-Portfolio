@@ -195,7 +195,7 @@
   }
 
   .Navbar {
-    background: $c-black;;
+    background: rgba(black, 0.8);
     color: $c-Navbar;
     font-size: 1rem;
     font-weight: bold;
@@ -374,6 +374,7 @@
 }
 
 .hero-container {
+  height: 100vh;
   background: #4774e6;
   background: -moz-linear-gradient(-45deg, #4774e6 0%, #1f1e8a 100%);
   background: -webkit-linear-gradient(-45deg, #4774e6 0%, #1f1e8a 100%);
@@ -412,14 +413,14 @@
     line-height: 1.1;
 
     @include desktop {
-      justify-content: flex-end;
+      align-items: center;
       line-height: 1.2;
     }
   }
 
   .half {
     width: 100%;
-    height: 45vh;
+    height: 50vh;
     @include desktop {
       width: 50%;
       height: 100vh;
