@@ -1,15 +1,35 @@
 .about-me {
+  @include flex(center, center, row nowrap);
   height: 100vh;
-  background: #D1D2D4;
+  color: $c-white;
 
   h2 {
     font-size: 4rem;
-    color: #EF5464;
+    margin: 0;
   }
 
   p {
-    text-align: right;
-    color: #37383A;
+  }
+
+  .frontend {
+    background: #363839;
+  }
+
+  .past {
+    background: #d1d3d4;
+  }
+  .hobbies{
+    background: #FA4F5B;
   }
 }
 
+.about-container {
+  height: 33vh;
+  ul li {
+    word-spacing: 2rem;
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+}
