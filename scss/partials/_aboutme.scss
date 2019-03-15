@@ -4,11 +4,20 @@
   color: $c-white;
 
   h2 {
+    font-weight: 900;
     font-size: 4rem;
-    margin: 0;
+    margin-bottom: 5rem;
+    @include desktop{
+      font-size: 7rem;
+      margin-bottom: 2rem;
+    }
   }
 
   p {
+    @include desktop {
+      font-size: 1.8rem;
+      width: 70%;
+    }
   }
 
   .frontend {
@@ -18,18 +27,27 @@
   .past {
     background: #d1d3d4;
   }
-  .hobbies{
+
+  .hobbies {
     background: #FA4F5B;
   }
 }
 
 .about-container {
-  height: 33vh;
+  display: flex;
+  text-align: left;
+  height: 33.33vh;
+
   ul li {
     word-spacing: 2rem;
     text-decoration: none;
     list-style: none;
     text-transform: uppercase;
+  }
+
+  .about-text-container {
+    @include flex(center, flex-start, column nowrap);
+    padding-left: 5rem;
   }
 
 }
