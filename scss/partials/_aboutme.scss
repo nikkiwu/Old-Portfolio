@@ -6,8 +6,8 @@
   h2 {
     font-weight: 900;
     font-size: 4rem;
-    margin-bottom: 5rem;
-    @include desktop{
+    margin-bottom: 2rem;
+    @include desktop {
       font-size: 7rem;
       margin-bottom: 2rem;
     }
@@ -47,7 +47,9 @@
 
   .about-text-container {
     @include flex(center, flex-start, column nowrap);
-    padding-left: 5rem;
+    @include desktop {
+      padding-left: 5rem;
+    }
   }
 
 }
