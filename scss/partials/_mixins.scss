@@ -5,6 +5,14 @@
   flex-flow: $flexflow;
 }
 
+@mixin background($image){
+  background: $image;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
